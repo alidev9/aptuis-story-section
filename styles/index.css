@@ -59,6 +59,8 @@ main{
     gap: 176px;
     justify-content: center;
     border-right: 15px solid lightgray;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
     border-left: none;
 }
 
@@ -68,6 +70,8 @@ main{
     justify-content: center;
     gap: 176px;
     border-left: 15px solid lightgray;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
     border-right: none;
 }
 
