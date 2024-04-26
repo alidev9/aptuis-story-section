@@ -27,63 +27,58 @@ main{
 .milestone-items-container{
     display: flex;
     flex-flow: column nowrap;
-    align-items: flex-end;
-    width: 1920px;
-    border-top: 15px solid lightgray;
-    border-bottom: 15px solid lightgray;
-}
+    align-items: center;
+    gap: 288px;
 
-/*.milestone-gap{
-    width: 1344px;
-    height: 288px;
-    border: 15px solid lightgray;
-    border-top: none;
-    border-bottom: none;
-}*/
+    background: url('/assets/Vector.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 .milestone-item{
-    width: 1344px;
-}
-
-.milestone-item:not(:nth-child(1 of .milestone-item)){
-    border-top: 7.5px solid lightgray;
-}
-
-.milestone-item:not(:nth-child(n of .milestone-item):last-child){
-    border-bottom: 7.5px solid lightgray;
-}
-
-/*targeting odd and even milestone-items to alterante the order of paragraphs and images*/
-:nth-child(odd of .milestone-item){
     display: flex;
-    gap: 176px;
-    justify-content: center;
-    border-right: 15px solid lightgray;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-    border-left: none;
 }
 
 :nth-child(even of .milestone-item){
-    display: flex;
     flex-flow: row-reverse nowrap;
-    justify-content: center;
-    gap: 176px;
-    border-left: 15px solid lightgray;
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-    border-right: none;
+}
+/*Adjusting milestone-item margins*/
+:nth-child(1 of .milestone-item){
+    padding-top: 64px;
+}
+:nth-child(n of .milestone-item):last-child{
+    padding-bottom: 64px;
+}
+:nth-child(odd of .milestone-item) > .milestone-image-container{
+    margin-left: 288px;
+}
+:nth-child(odd of .milestone-item) > .milestone-story-container{
+    margin-left: 176px;
+}
+:nth-child(even of .milestone-item) > .milestone-story-container{
+    margin-left: 176px;
 }
 
-/*styling the outer borders of the first and last items*/
-:nth-child(1 of .milestone-item), :nth-child(n of .milestone-item):last-child{
-    display: flex;
-}
-
-.milestone-item > .milestone-item-inner-wrapper > .milestone-story-container > p{
-    width: 388px;
+.milestone-item > .milestone-story-container > p{
+    width: 384px;
 }
 
 .milestone-item img{
     width: 433px;
+}
+
+/*applying font*/
+.milestone-story-container > h3,
+.milestone-story-container > p,
+.milestone-image-container > h4{
+    font-family: "Vollkorn SC";
+}
+
+.milestone-image-container > h4{
+    width: min-content;
+    font-size: 64px;
+    font-weight: 400;
+    margin: 0 0 32px 176px;
+    border-bottom: 3px solid #E9B52F;
 }
