@@ -13,72 +13,138 @@ body{
 main{
     display: flex;
     flex-flow: column nowrap;
-    width: 1920px;
+    width: 100%;
 }
 
 /*styling the roadmap section*/
 .roadmap-container{
-    margin: 128px 0px;
+    padding: 128px 0px;
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+
+    width: 100%;
 }
 
 .milestone-items-container{
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
-    gap: 288px;
+    height: 1750px;
 
-    background: url('/assets/Vector.svg');
-    background-size: contain;
+    background: url('/assets/vector.svg');
     background-repeat: no-repeat;
-    background-position: center;
+
+    box-sizing: border-box;
 }
 
 .milestone-item{
     display: flex;
-}
+    /*in order to fit into the roadmap design*/
+    width: 758px;
+    height: 345px;
+    padding-top: 32px;
+    box-sizing: border-box;
+    gap: 41px;
 
+    margin-left: 264px;
+}
 :nth-child(even of .milestone-item){
+    /*alternating the order of milestone-item children that are even*/
     flex-flow: row-reverse nowrap;
-}
-/*Adjusting milestone-item margins*/
-:nth-child(1 of .milestone-item){
-    padding-top: 64px;
-}
-:nth-child(n of .milestone-item):last-child{
-    padding-bottom: 64px;
-}
-:nth-child(odd of .milestone-item) > .milestone-image-container{
-    margin-left: 288px;
-}
-:nth-child(odd of .milestone-item) > .milestone-story-container{
-    margin-left: 176px;
-}
-:nth-child(even of .milestone-item) > .milestone-story-container{
-    margin-left: 176px;
-}
-
-.milestone-item > .milestone-story-container > p{
-    width: 384px;
-}
-
-.milestone-item img{
-    width: 433px;
+    gap: 64px;
 }
 
 /*applying font*/
 .milestone-story-container > h3,
 .milestone-story-container > p,
-.milestone-image-container > h4{
+.milestone-image-container > h4,
+.roadmap-container > h2{
     font-family: "Vollkorn SC";
 }
 
-.milestone-image-container > h4{
-    width: min-content;
+.roadmap-container > h2{
     font-size: 64px;
     font-weight: 400;
-    margin: 0 0 32px 176px;
-    border-bottom: 3px solid #E9B52F;
+    line-height: 70px;
+    margin: 0 0 6px 32px;
+    width: fit-content;
+}
+
+.roadmap-container > h2::after{
+    content: url('/assets/yellow-arrow.svg');
+    margin-left: 24px;
+}
+
+.milestone-story-container > h3,
+.milestone-image-container > h4{
+    margin: 0;
+}
+.roadmap-container > h2,
+.milestone-story-container > h3,
+.milestone-story-container > p,
+.milestone-image-container > h4{
+    color: #061f37;
+}
+.milestone-story-container{
+    padding-top: 49px;
+}
+
+.milestone-story-container > h3{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.milestone-story-container > p{
+    margin: 0;
+    width: 384px;
+}
+
+.milestone-image-container{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+:nth-child(even of .milestone-item) > .milestone-image-container{
+    position: relative;
+    right: 116px;
+}
+:nth-child(odd of .milestone-item) > .milestone-story-container{
+    position: relative;
+    right: 48px;
+}
+:nth-child(even of .milestone-item) > .milestone-story-container{
+    position: relative;
+    right: 92px;
+    text-align: right;
+}
+
+.milestone-image-container > h4{
+    font-size: 64px;
+    font-weight: 400;
+    border-bottom: 3px #E9B52F solid;
+    line-height: 48px;
+    width: min-content;
+    align-self: center;
+}
+
+:nth-child(odd of .milestone-item) > .milestone-image-container > h4{
+    position: relative;
+    left: 32px;
+}
+
+:nth-child(even of .milestone-item) > .milestone-image-container > h4{
+    position: relative;
+    right: 12px;
+}
+
+
+.milestone-image-container > img{
+    padding-top: 32px;
+    width: 333px;
+}
+
+:nth-child(even of .milestone-item) > .milestone-image-container > img{
+    position: relative;
+    left: 20px;
 }
