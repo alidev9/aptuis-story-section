@@ -32,7 +32,7 @@ main{
     flex-flow: column nowrap;
     height: 1750px;
 
-    background: url('/assets/vector.svg');
+    background: url('../assets/vector.svg');
     background-repeat: no-repeat;
 
     box-sizing: border-box;
@@ -72,7 +72,7 @@ main{
 }
 
 .roadmap-container > h2::after{
-    content: url('/assets/yellow-arrow.svg');
+    content: url('../assets/yellow-arrow.svg');
     margin-left: 24px;
 }
 
