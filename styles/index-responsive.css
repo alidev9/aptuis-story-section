@@ -16,64 +16,12 @@ main{
     width: 100%;
 }
 
-/*styling the roadmap section*/
-.roadmap-container{
-    padding: 128px 0px;
-    display: flex;
-    flex-flow: column nowrap;
-    background-color: #f4f4f4;
-    box-sizing: border-box;
-
-    width: 100%;
-}
-
-.milestone-items-container{
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: flex-start;
-    width: fit-content;
-    height: calc(1366px * 2863 / 1920);
-    background-image: url('../assets/vector.svg');
-    background-repeat: no-repeat;
-    background-size: calc(1366px * 1632 / 1920);
-
-    box-sizing: border-box;
-}
-
-.milestone-item{
-    display: flex;
-    gap: 174.30px;
-    box-sizing: border-box;
-    height: 20%;
-    padding-left: 244.74px;
-}
-
-:nth-child(even of .milestone-item){
-    /*alternating the order of milestone-item children that are even*/
-    flex-flow: row-reverse nowrap;
-    padding-left: 162.92px;
-}
-
 /*applying font*/
 .milestone-story-container > h3,
 .milestone-story-container > p,
 .milestone-image-container > h4,
 .roadmap-container > h2{
     font-family: "Vollkorn SC";
-}
-
-.roadmap-container > h2{
-    font-size: 64.03px;
-    font-weight: 400;
-    line-height: 49.8px;
-    margin: 0;
-    padding: 0 0 22.77px 138.02px;
-    width: fit-content;
-}
-
-.roadmap-container > h2::after{
-    content: url('../assets/yellow-arrow.svg');
-    margin-left: 17.07px;
 }
 
 .milestone-story-container > h3,
@@ -86,47 +34,11 @@ main{
     color: #061f37;
 }
 
-.milestone-story-container{
-    padding-top: 98.89px;
-}
-
-.milestone-story-container > h3{
-    font-size: 28.54px;
-    font-weight: 400;
-    padding-bottom: 13.52px;
-}
-
-.milestone-story-container > p{
-    font-size: 19.92px;
-    margin: 0;
-    width: 474.54px;
-}
-
-.milestone-image-container{
-    display: flex;
-    flex-flow: column nowrap;
-    padding-top: 26.32px;
-}
-
 :nth-child(even of .milestone-item) > .milestone-story-container{
     text-align: right;
 }
 
-.milestone-image-container > h4{
-    width: 123.08px;
-    height: 73.99px;
-    font-size: 65.45px;
-    font-weight: 400;
-    border-bottom: 3px #E9B52F solid;
-    align-self: center;
-}
-
-.milestone-image-container > img{
-    padding-top: 45.53px;
-    width: 306.64px;
-}
-
-@media (1280px <= width <= 1920px){
+@media (576px <= width <= 1920px){
 
     .roadmap-container{
         padding: calc(100vw * 128/1920) 0px;
@@ -175,7 +87,14 @@ main{
     }
 
     .roadmap-container > h2::after{
-        content: url('../assets/yellow-arrow.svg');
+        content: '';
+        display: inline-block;
+    
+        height: calc(100vw * 47/1920);
+        width: calc(100vw * 26.43/1920);
+        background-image: url('../assets/yellow-arrow.svg');
+        background-size: auto calc(100vw * 47/1920);
+        background-repeat: no-repeat;
         margin-left: calc(100vw * 24/1920);
     }
 
@@ -206,7 +125,7 @@ main{
         height: calc(100vw * 104/1920);
         font-size: calc(100vw * 92/1920);
         font-weight: 400;
-        border-bottom: 3px #E9B52F solid;
+        border-bottom: calc(100vw * 3/1920) #E9B52F solid;
         align-self: center;
     }
 
