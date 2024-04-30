@@ -16,45 +16,54 @@ main{
     width: 100%;
 }
 
+.milestone-items-container{
+    width: 100%;
+}
+
 /*applying font*/
 .milestone-story-container > h3,
 .milestone-story-container > p,
 .milestone-image-container > h4,
-.roadmap-container > h2{
+.history-container > h2{
     font-family: "Vollkorn SC";
 }
 
 .milestone-story-container > h3,
+.milestone-story-container > p,
 .milestone-image-container > h4{
     margin: 0;
 }
-.roadmap-container > h2,
+
+.history-container{
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.history-container > h2{
+    margin: 0;
+    width: fit-content;
+    font-weight: 400;
+}
+
+.history-container > h2,
 .milestone-story-container > p,
 .milestone-image-container > h4{
     color: #061f37;
 }
 
-:nth-child(even of .milestone-item) > .milestone-story-container{
-    text-align: right;
-}
+@media (1280px <= width <= 1920px){
 
-@media (576px <= width <= 1920px){
-
-    .roadmap-container{
+    .history-container{
         padding: calc(100vw * 128/1920) 0px;
         display: flex;
         flex-flow: column nowrap;
-        background-color: #f4f4f4;
-        box-sizing: border-box;
-    
-        width: 100%;
     }
 
     .milestone-items-container{
         display: flex;
         flex-flow: column nowrap;
         align-items: flex-start;
-        width: fit-content;
         height: calc(100vw * 2863/1920);
         background-image: url('../assets/vector.svg');
         background-repeat: no-repeat;
@@ -67,7 +76,7 @@ main{
         display: flex;
         gap: calc(100vw * 245/1920);
         box-sizing: border-box;
-        height: 20%;
+        flex-grow: 1;
         padding-left: calc(100vw * 344/1920);
     }
 
@@ -76,17 +85,17 @@ main{
         flex-flow: row-reverse nowrap;
         padding-left: calc(100vw * 229/1920);
     }
-
-    .roadmap-container > h2{
-        font-size: calc(100vw * 90/1920);
-        font-weight: 400;
-        line-height: calc(100vw * 70/1920);
-        margin: 0;
-        padding: 0 0 calc(100vw * 32/1920) calc(100vw * 194/1920);
-        width: fit-content;
+    :nth-child(even of .milestone-item) > .milestone-story-container{
+        text-align: right;
     }
 
-    .roadmap-container > h2::after{
+    .history-container > h2{
+        font-size: calc(100vw * 90/1920);
+        line-height: calc(100vw * 70/1920);
+        padding: 0 0 calc(100vw * 32/1920) calc(100vw * 194/1920);
+    }
+
+    .history-container > h2::after{
         content: '';
         display: inline-block;
     
@@ -110,7 +119,6 @@ main{
 
     .milestone-story-container > p{
         font-size: calc(100vw * 28/1920);
-        margin: 0;
         width: calc(100vw * 667/1920);
     }
 
@@ -133,6 +141,5 @@ main{
         padding-top: calc(100vw * 64/1920);
         width: calc(100vw * 431/1920);
     }
-
 
 }

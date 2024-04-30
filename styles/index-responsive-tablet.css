@@ -1,0 +1,83 @@
+@media (576px <= width <= 1279px){
+    .history-container{
+        padding: calc(100vw * 64/834) 0px;
+    }
+    .history-container > h2{
+        font-size: calc(100vw * 70/834);
+        padding-left: calc(100vw * 47/834);
+    }
+    .history-container > h2::after{
+        content: '';
+        display: inline-block;
+    
+        height: calc(100vw * 37/834);
+        width: calc(100vw * 20.81/834);
+        background-image: url('../assets/yellow-arrow.svg');
+        background-size: auto calc(100vw * 37/834);
+        background-repeat: no-repeat;
+        margin-left: calc(100vw * 24/834);
+    }
+
+    .milestone-items-container{
+        display: flex;
+        flex-flow: column nowrap;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        height: calc(100vw * 2681/834);
+        background-image: url('../assets/vector-tablet.svg');
+        background-repeat: no-repeat;
+        background-size: calc(100vw * 698/834) calc(100vw * 2681/834);
+    
+        box-sizing: border-box;
+    }
+    .milestone-item{
+        flex-grow: 1;
+        display: flex;
+        flex-flow: column nowrap;
+
+        padding-top: calc(100vw * 15/834);
+        box-sizing: border-box;
+    }
+    :nth-child(odd of .milestone-item){
+        padding-left: calc(100vw * 76/834);
+        text-align: right;
+    }
+    :nth-child(odd of .milestone-item) > .milestone-image-container > h4,
+    :nth-child(odd of .milestone-item) > .milestone-image-container > img{
+        align-self: flex-end;
+    }
+
+    :nth-child(even of .milestone-item){
+        padding-left: calc(100vw * 192/834);
+    }
+    .milestone-item > .milestone-story-container,
+    .milestone-item > .milestone-image-container{
+        /*this allows .milestone-item to rearrange all child elements
+        using the order property*/
+        display: contents;
+    }
+    .milestone-story-container > h3{
+        order: 2;
+        font-size: calc(100vw * 40/834);
+        font-weight: 400;
+    }
+    .milestone-story-container > p{
+        order: 3;
+        font-size: calc(100vw * 18/834);
+        width: calc(100vw * 569/834);
+    }
+    .milestone-image-container > h4{
+        order: 1;
+        width: calc(100vw * 116/834);
+        height: calc(100vw * 68/834);
+        font-size: calc(100vw * 60/834);
+        font-weight: 400;
+        border-bottom: calc(100vw * 3/834) #E9B52F solid;
+    }
+    .milestone-image-container > img{
+        order: 4;
+        width: calc(100vw * 336.61/834);
+        padding-top: calc(100vw * 17/834);
+    }
+}
