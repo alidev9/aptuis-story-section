@@ -1,5 +1,5 @@
 /*applies to both tablet and mobile*/
-@media (320px <= width <= 1279px){
+@media (320px <= width <= 991px){
     .milestone-item > .milestone-story-container,
     .milestone-item > .milestone-image-container{
         /*this allows .milestone-item to rearrange all child elements
@@ -8,7 +8,7 @@
     }
 }
 
-@media (576px <= width <= 1279px){
+@media (576px <= width <= 991px){
     .history-container{
         padding: calc(100vw * 64/834) 0px;
     }

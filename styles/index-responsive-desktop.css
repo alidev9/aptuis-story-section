@@ -52,7 +52,7 @@ main{
     color: #061f37;
 }
 
-@media (1280px <= width <= 1920px){
+@media (992px <= width <= 1920px){
 
     .history-container{
         padding: calc(100vw * 128/1920) 0px;
