@@ -1,3 +1,13 @@
+/*applies to both tablet and mobile*/
+@media (320px <= width <= 1279px){
+    .milestone-item > .milestone-story-container,
+    .milestone-item > .milestone-image-container{
+        /*this allows .milestone-item to rearrange all child elements
+        using the order property*/
+        display: contents;
+    }
+}
+
 @media (576px <= width <= 1279px){
     .history-container{
         padding: calc(100vw * 64/834) 0px;
@@ -19,8 +29,6 @@
     }
 
     .milestone-items-container{
-        display: flex;
-        flex-flow: column nowrap;
         display: flex;
         flex-flow: column nowrap;
         align-items: flex-start;
@@ -50,12 +58,6 @@
 
     :nth-child(even of .milestone-item){
         padding-left: calc(100vw * 192/834);
-    }
-    .milestone-item > .milestone-story-container,
-    .milestone-item > .milestone-image-container{
-        /*this allows .milestone-item to rearrange all child elements
-        using the order property*/
-        display: contents;
     }
     .milestone-story-container > h3{
         order: 2;
