@@ -1,0 +1,67 @@
+/*Base styling, should apply to all device sizes*/
+html{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0px;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+
+.milestone-items-container{
+    width: 100%;
+}
+
+/*applying font*/
+.milestone-story-container > h3,
+.milestone-story-container > p,
+.milestone-image-container > h4,
+.history-container > h2{
+    font-family: "Vollkorn SC";
+}
+
+.milestone-story-container > h3,
+.milestone-story-container > p,
+.milestone-image-container > h4{
+    margin: 0;
+}
+
+.history-container{
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.history-container > h2{
+    margin: 0;
+    width: fit-content;
+    font-weight: 400;
+}
+
+.history-container > h2,
+.milestone-story-container > p,
+.milestone-image-container > h4{
+    color: #061f37;
+}
+
+/*animations*/
+.milestone-story-container > h3,
+.milestone-story-container > p,
+.milestone-image-container > img{
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.milestone-story-container > h3.fade-in,
+.milestone-story-container > p.fade-in,
+.milestone-image-container > img.fade-in{
+    opacity: 1;
+}
