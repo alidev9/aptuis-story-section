@@ -1,7 +1,7 @@
 const mileStoneItems = document.querySelectorAll('.milestone-item');
 
 function fadeElement(element){
-    const rect = element.querySelector('h4').getBoundingClientRect()
+    const rect = element.querySelector('p').getBoundingClientRect()
     const isInViewport = rect.top >= 0 &&
     rect.bottom <= window.innerHeight;
     if(isInViewport){
