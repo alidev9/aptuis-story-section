@@ -1,23 +1,21 @@
 const mileStoneItems = document.querySelectorAll('.milestone-item');
 
-function fadeElement(element){
-    const rect = element.querySelector('p').getBoundingClientRect()
-    const isInViewport = rect.top >= 0 &&
-    rect.bottom <= window.innerHeight;
-    if(isInViewport){
+function fadeInElement(element){
+    /*If the story paragraph is in the viewport,
+    fade in that paragraph, and the h3 and img associated with it*/
+    const storyParagraph = element.querySelector('p');
+    const rect = storyParagraph.getBoundingClientRect();
+    const isInViewport = rect.bottom <= window.innerHeight;
+    if(isInViewport && !storyParagraph.classList.contains('fade-in')){
         element.querySelector('h3').classList.add('fade-in');
         element.querySelector('p').classList.add('fade-in');
         element.querySelector('img').classList.add('fade-in');
-    } else {
-        element.querySelector('h3').classList.remove('fade-in');
-        element.querySelector('p').classList.remove('fade-in');
-        element.querySelector('img').classList.remove('fade-in');
     }
 }
 
 function handleScroll(){
     for(let i = 0; i < mileStoneItems.length; i++){
-        fadeElement(mileStoneItems[i]);
+        fadeInElement(mileStoneItems[i]);
     }
 }
 
