@@ -1,7 +1,7 @@
 const mileStoneItems = document.querySelectorAll('.milestone-item');
 
 function fadeInElement(element){
-    /*If the story paragraph is in the viewport,
+    /*If the story paragraph is in the viewport and not visible,
     fade in that paragraph, and the h3 and img associated with it*/
     const storyParagraph = element.querySelector('p');
     const rect = storyParagraph.getBoundingClientRect();
