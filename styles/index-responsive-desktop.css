@@ -54,10 +54,12 @@
     }
 
     .milestone-story-container{
-        padding-top: calc(100vw * 139/1920);
+        /*padding-top: calc(100vw * 139/1920);*/
+        margin: auto 0;
     }
 
     .milestone-story-container > h3{
+        width: calc(100vw * 667/1920);
         font-size: calc(100vw * 40/1920);
         font-weight: 400;
         padding-bottom: calc(100vw * 19/1920);

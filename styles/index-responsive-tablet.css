@@ -40,11 +40,9 @@
         box-sizing: border-box;
     }
     .milestone-item{
-        flex-grow: 1;
+        height: 20%;
         display: flex;
         flex-flow: column nowrap;
-
-        padding-top: calc(100vw * 15/834);
         box-sizing: border-box;
     }
     :nth-child(odd of .milestone-item){
@@ -61,8 +59,9 @@
     }
     .milestone-story-container > h3{
         order: 2;
-        font-size: calc(100vw * 40/834);
+        font-size: calc(100vw * 32/834);
         font-weight: 400;
+        width: calc(100vw * 569/834);
     }
     .milestone-story-container > p{
         order: 3;
@@ -80,6 +79,6 @@
     .milestone-image-container > img{
         order: 4;
         width: calc(100vw * 336.61/834);
-        padding-top: calc(100vw * 17/834);
+        margin: auto 0;
     }
 }

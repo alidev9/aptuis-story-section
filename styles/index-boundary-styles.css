@@ -61,6 +61,7 @@
         font-size: calc(1920px * 40/1920);
         font-weight: 400;
         padding-bottom: calc(1920px * 19/1920);
+        width: calc(1920px * 667/1920);
     }
 
     .milestone-story-container > p{

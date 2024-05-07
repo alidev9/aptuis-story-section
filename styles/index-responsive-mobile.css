@@ -29,11 +29,10 @@
         box-sizing: border-box;
     }
     .milestone-item{
-        flex-grow: 1;
+        height: 20%;
         display: flex;
         flex-flow: column nowrap;
         width: 100%;
-        padding-top: calc(100vw * 35/393);
         box-sizing: border-box;
     }
     :nth-child(odd of .milestone-item){
@@ -42,6 +41,13 @@
     }
     :nth-child(even of .milestone-item){
         padding-left: calc(100vw * 93/393);
+    }
+    :nth-child(1 of .milestone-item),
+    :nth-child(2 of .milestone-item){
+        justify-content: center;
+    }
+    :nth-child(3 of .milestone-item){
+        padding-top: calc(100vw * 12/393);
     }
     .milestone-story-container > h3{
         order: 2;
@@ -53,10 +59,12 @@
         order: 3;
         font-size: calc(100vw * 14/393);
     }
+    :nth-child(odd of .milestone-item) > .milestone-story-container > h3,
     :nth-child(odd of .milestone-item) > .milestone-story-container > p{
         width: calc(100vw * 284/393);
         text-align: right;
     }
+    :nth-child(even of .milestone-item) > .milestone-story-container > h3,
     :nth-child(even of .milestone-item) > .milestone-story-container > p{
         width: calc(100vw * 261/393);
     }
